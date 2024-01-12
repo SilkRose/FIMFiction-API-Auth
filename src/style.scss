@@ -1,104 +1,104 @@
 @use "./theme.scss";
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
+	font-family: Arial, sans-serif;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
 }
 
 #mane {
-  font-size: 150%;
-  max-width: 900px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  overflow: auto;
-  > :first-child {
-    padding-top: 0;
-  }
-  > :last-child {
-    padding-bottom: 0;
-  }
-  @media (max-width: 450px) {
-    padding: 1rem;
-  }
+	font-size: 150%;
+	max-width: 900px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 2rem;
+	border-radius: 10px;
+	text-align: center;
+	overflow: auto;
+	> :first-child {
+		padding-top: 0;
+	}
+	> :last-child {
+		padding-bottom: 0;
+	}
+	@media (max-width: 450px) {
+		padding: 1rem;
+	}
 }
 
 #input_field {
-  display: flex;
-  gap: 0.5rem;
-  input {
-    flex-grow: 1;
-    min-height: 2.25rem;
-    outline: transparent;
-    border-style: solid;
-    border-width: 0.15rem;
-    border-radius: 0;
-    border-top: transparent;
-    border-left: transparent;
-    border-right: transparent;
-    padding: 0.5rem;
-  }
+	display: flex;
+	gap: 0.5rem;
+	input {
+		flex-grow: 1;
+		min-height: 2.25rem;
+		outline: transparent;
+		border-style: solid;
+		border-width: 0.15rem;
+		border-radius: 0;
+		border-top: transparent;
+		border-left: transparent;
+		border-right: transparent;
+		padding: 0.5rem;
+	}
 }
 
 @mixin flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	align-items: center;
+	justify-content: center;
 }
 
 #input_radial {
-  @include flex();
-  input {
-    outline: transparent;
-    margin-right: 0.5rem;
-  }
-  label:has(input[type="radio"]:hover),
-  label:has(input[type="radio"]:checked) {
-    text-decoration: underline;
-    text-decoration-thickness: 0.15rem;
-    text-underline-offset: 0.25rem;
-  }
+	@include flex();
+	input {
+		outline: transparent;
+		margin-right: 0.5rem;
+	}
+	label:has(input[type="radio"]:hover),
+	label:has(input[type="radio"]:checked) {
+		text-decoration: underline;
+		text-decoration-thickness: 0.15rem;
+		text-underline-offset: 0.25rem;
+	}
 }
 
 #input_radial,
 #input_field {
-  button {
-    outline: transparent;
-    border-style: solid;
-    border-radius: 0;
-    padding: 0.5rem;
-  }
+	button {
+		outline: transparent;
+		border-style: solid;
+		border-radius: 0;
+		padding: 0.5rem;
+	}
 }
 
 ::placeholder {
-  font-style: italic;
-  opacity: 1; // Set opacity for Firefox.
+	font-style: italic;
+	opacity: 1; // Set opacity for Firefox.
 }
 
 .pixelated {
-  image-rendering: pixelated;
+	image-rendering: pixelated;
 }
 
 @keyframes fade-in-up {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
