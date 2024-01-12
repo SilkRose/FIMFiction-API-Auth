@@ -8,7 +8,7 @@
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
-		"pfmt": "prettier **/*.{ts,json} --use-tabs --write"
+		"pfmt": "prettier **/*.{ts,json,scss} --use-tabs --write"
 	},
 	"repository": {
 		"type": "git",
