@@ -20,7 +20,14 @@ async function mane() {
 		append_element(error);
 		append_element(message);
 	} else {
+		const button = document.createElement("button");
+		button.innerText = "Copy to clipboard";
+		button.id = "copy";
 		append_element(parameters);
+		mane_content.appendChild(button);
+		button.addEventListener("click", function () {
+			navigator.clipboard.writeText(parameters);
+		});
 	}
 }
 
