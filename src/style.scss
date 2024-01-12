@@ -63,42 +63,11 @@ main {
 	justify-content: center;
 }
 
-#input_radial {
-	@include flex();
-	input {
-		outline: transparent;
-		margin-right: 0.5rem;
-	}
-	label:has(input[type="radio"]:hover),
-	label:has(input[type="radio"]:checked) {
-		text-decoration: underline;
-		text-decoration-thickness: 0.15rem;
-		text-underline-offset: 0.25rem;
-	}
-}
-
-#input_radial,
 #input_field {
 	button {
 		outline: transparent;
 		border-style: solid;
 		border-radius: 0;
 		padding: 0.5rem;
-	}
-}
-
-::placeholder {
-	font-style: italic;
-	opacity: 1; // Set opacity for Firefox.
-}
-
-.pixelated {
-	image-rendering: pixelated;
-}
-
-@keyframes fade-in-up {
-	to {
-		opacity: 1;
-		transform: translateY(0);
 	}
 }

@@ -54,35 +54,6 @@ body {
 	background-color: var(--foreground);
 }
 
-#input_field input {
-	background-color: var(--input_background);
-	border-color: var(--border);
-}
-
-#input_radial {
-	input[type="radio"] {
-		:hover {
-			accent-color: var(--mane_accent_inactive);
-		}
-		:active,
-		:checked,
-		:checked:focus {
-			accent-color: var(--mane_accent_active);
-		}
-		label {
-			:has(input[type="radio"]:checked:focus) {
-				text-decoration-color: var(--mane_accent_active);
-			}
-			:has(input[type="radio"]:hover),
-			:has(input[type="radio"]:checked) {
-				border-color: var(--border);
-				text-decoration-color: var(--mane_accent_inactive);
-			}
-		}
-	}
-}
-
-#input_radial,
 #input_field {
 	input:focus {
 		border-color: var(--mane_accent_active);
@@ -96,10 +67,6 @@ body {
 			border-color: var(--mane_accent_active);
 		}
 	}
-}
-
-::placeholder {
-	color: var(--placeholder);
 }
 
 @mixin theme-light {
