@@ -4,7 +4,11 @@ import "@total-typescript/ts-reset";
 window.onload = mane;
 
 async function mane() {
-	const values = window.location.search;
-	const params = new URLSearchParams(values);
-	params.forEach((p) => console.log(p));
+	let paramString = document.URL.toString().split("#")[1];
+	let params_arr = paramString.split("&");
+	for (let i = 0; i <= params_arr.length - 1; i++) {
+		let pair = params_arr[i].split("=");
+		console.log("Key is:", pair[0]);
+		console.log("Value is:", pair[1]);
+	}
 }
