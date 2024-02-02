@@ -5,7 +5,7 @@ let mane_content = document.getElementById("mane")!;
 window.onload = mane;
 
 async function mane() {
-	const parameters = document.URL.toString().split("#")[1];
+	const parameters = document.URL.toString().split(/\/[#?]/)[1];
 	if (parameters.includes("error")) {
 		let error_type;
 		const array = parameters.split("&");
